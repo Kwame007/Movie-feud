@@ -1,0 +1,55 @@
+.ui.menu > .container,
+.ui.menu > .grid {
+  height: 200px;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("./image/serge-kutuzov-7ya3l_JdHpM-unsplash.jpg") no-repeat center
+      center/cover;
+}
+
+.ui.label {
+  background-color: #ccc;
+  margin-bottom: 0.3rem;
+}
+
+.info .plot {
+  font-weight: 600;
+  color: #333;
+}
+
+.logo {
+  color: #fff;
+  background-color: #d82148;
+  width: 200px;
+  padding: 20px 0;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.ui.floating.label {
+  top: -1em;
+  left: 5%;
+}
+
+/* .ui.basic.red.label {
+  border: #495371;
+} */
+.ui.basic.red.label {
+  background: none #fff !important;
+  color: #495371 !important;
+  border-color: #495371 !important;
+  margin-bottom: 0.3rem;
+}
+
+/* utility */
+.is-positive {
+  border: 0.1px #a3c292 solid !important;
+  background-color: #fcfff5 !important;
+  box-shadow: 0 0 0 0.6px #a3c293 inset, 0 0 0 0 transparent !important;
+}
+.is-negative {
+  border: 0.1px #e0b4b4 solid !important;
+  background-color: #fef5f6 !important;
+  box-shadow: 0 0 0 0.6px #e0b4b4 inset, 0 0 0 0 transparent !important;
+}

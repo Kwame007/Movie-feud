@@ -1,0 +1,19 @@
+{
+  "name": "movie-fued",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "@kwame007",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.4.0",
+    "process": "^0.11.10"
+  }
+}

@@ -1,4 +1,7 @@
-import { renderLeftSideMovie, renderRightSideMovie } from "./js/helperFunctions";
+import {
+  renderLeftSideMovie,
+  renderRightSideMovie,
+} from "./js/helperFunctions";
 
 // {commonjs import}
 // const { request } = require("./request");
@@ -12,3 +15,5 @@ leftSideForm.addEventListener("submit", renderLeftSideMovie);
 rightSideForm.addEventListener("submit", renderRightSideMovie);
 
 // {es6 named export}
+
+

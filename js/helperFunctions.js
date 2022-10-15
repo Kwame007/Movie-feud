@@ -212,6 +212,43 @@ const showError = function (message, className) {
   }, 3000);
 };
 
+const kvArray = [
+  { key: 1, value: 10 },
+  { key: 2, value: 20 },
+  { key: 3, value: 30 },
+];
+
+console.log(kvArray.map(({ key, value }) => ({ [key]: value })));
+
+const words = [
+  "spray",
+  "limit",
+  "elite",
+  "exuberant",
+  "destruction",
+  "present",
+];
+
+console.log(
+  words.filter((words) => words.length > 6).map((words) => words + "!")
+);
+
+const testData = [12, 3, 4, 43, 5, 6, 7, 6, 7, 5, 3, 5, 4, 5, 4, 2];
+console.log(testData.reduce((acc, curr) => acc + curr, testData[0]));
+
+const inventory = [
+  { name: "apples", quantity: 2 },
+  { name: "bananas", quantity: 0 },
+  { name: "cherries", quantity: 5 },
+];
+
+console.log(inventory.find((item) => item.quantity === 2));
+console.log(inventory.some((ele) => ele.quantity < 2));
+
+console.log([1, 30, 39, 29, 10, 13].every((ele) => ele > 10));
+
+console.log([1, 30, [39, 29], [10, 13]].flat());
+
 export {
   calcMovieStats,
   createGenreLabels,

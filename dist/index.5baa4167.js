@@ -704,38 +704,96 @@ const showError = function(message, className) {
         messageDiv.remove();
     }, 3000);
 };
+const kvArray = [
+    {
+        key: 1,
+        value: 10
+    },
+    {
+        key: 2,
+        value: 20
+    },
+    {
+        key: 3,
+        value: 30
+    }, 
+];
+console.log(kvArray.map(({ key , value  })=>({
+        [key]: value
+    })
+));
+const words = [
+    "spray",
+    "limit",
+    "elite",
+    "exuberant",
+    "destruction",
+    "present", 
+];
+console.log(words.filter((words1)=>words1.length > 6
+).map((words2)=>words2 + "!"
+));
+const testData = [
+    12,
+    3,
+    4,
+    43,
+    5,
+    6,
+    7,
+    6,
+    7,
+    5,
+    3,
+    5,
+    4,
+    5,
+    4,
+    2
+];
+console.log(testData.reduce((acc, curr)=>acc + curr
+, testData[0]));
+const inventory = [
+    {
+        name: "apples",
+        quantity: 2
+    },
+    {
+        name: "bananas",
+        quantity: 0
+    },
+    {
+        name: "cherries",
+        quantity: 5
+    }, 
+];
+console.log(inventory.find((item)=>item.quantity === 2
+));
+console.log(inventory.some((ele)=>ele.quantity < 2
+));
+console.log([
+    1,
+    30,
+    39,
+    29,
+    10,
+    13
+].every((ele)=>ele > 10
+));
+console.log([
+    1,
+    30,
+    [
+        39,
+        29
+    ],
+    [
+        10,
+        13
+    ]
+].flat());
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./renderMovie":"lM9Jv","./request":"7c4ZJ"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"lM9Jv":[function(require,module,exports) {
+},{"./renderMovie":"lM9Jv","./request":"7c4ZJ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lM9Jv":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _helperFunctions = require("./helperFunctions");
@@ -898,7 +956,37 @@ const renderMovie = function(data, element) {
 };
 exports.default = renderMovie;
 
-},{"./helperFunctions":"7JMdY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7c4ZJ":[function(require,module,exports) {
+},{"./helperFunctions":"7JMdY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"7c4ZJ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 // import axios
